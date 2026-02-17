@@ -1,0 +1,937 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- NAVIGATION -->
+  <nav
+    id="main-nav"
+    class="fixed w-full z-50 top-0 start-0 border-b border-white/5 bg-transparent transition-all duration-500 py-4"
+  >
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-0"
+    >
+      <a href="#home" class="flex items-center space-x-3 group">
+        <span
+          class="text-xl md:text-2xl font-heading font-bold text-white tracking-widest uppercase transition-all group-hover:text-primary"
+        >
+          <span class="text-primary group-hover:text-white transition-colors"
+            >Kyokushin</span
+          > Karate Arrach
+        </span>
+      </a>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-white/10"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-heading flex flex-col p-4 md:p-0 mt-4 border border-white/10 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:border-0 uppercase tracking-widest text-sm"
+        >
+          <li>
+            <a
+              href="#about"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >DOJO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#training"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >TRAINING</a
+            >
+          </li>
+          <li>
+            <a
+              href="#trainingszeiten"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >TRAININGSZEITEN</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >GALERIE</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#contact"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors uppercase"
+              >KONTAKT</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section
+    id="home"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+  >
+    <!-- Background: subtle bottom fade only -->
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-dark to-transparent"
+      >
+      </div>
+    </div>
+
+    <!-- Centered Content -->
+    <div
+      class="relative z-10 container mx-auto px-4 text-center flex flex-col items-center justify-center min-h-screen py-20"
+    >
+      <!-- Balanced Branding Grid -->
+      <div
+        class="mb-8 animate-zoom-in grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center w-full max-w-screen-2xl mx-auto px-4 gap-8 md:gap-0"
+      >
+        <!-- Left Spacer -->
+        <div class="hidden md:block"></div>
+
+        <!-- Center: Main Logo -->
+        <div class="flex justify-center relative group">
+          <img
+            src="/hero-logo.png"
+            alt="Kyokushin Karate Arrach"
+            class="w-full max-w-[280px] md:max-w-[420px] lg:max-w-[500px] h-auto"
+          />
+        </div>
+
+        <!-- Right: Official IKO Kanji Group -->
+        <div class="hidden md:flex items-center justify-start md:pl-2 lg:pl-6">
+          <div
+            class="flex items-center gap-4 pl-4 border-l border-white/10 h-32 group cursor-pointer hover:border-primary/50 transition-colors duration-500"
+          >
+            <!-- The 'Kyokushinkai' SVG Symbol (Watermark) -->
+            <img
+              src="/Kyokushinkai.svg"
+              alt="Kyokushin Kanji"
+              class="h-[180px] w-auto invert brightness-200 contrast-125 opacity-10 transition-all duration-700 group-hover:opacity-40 group-hover:scale-110"
+            />
+            <!-- Organization Name (stacked vertically) -->
+            <div
+              class="font-japanese text-white tracking-widest font-medium text-center transition-all duration-500 flex flex-col justify-center h-full gap-1"
+            >
+              <span
+                class="text-[12px] text-gray-400 font-light transition-all duration-500 group-hover:text-primary"
+                >国際空手道連盟</span
+              >
+              <span
+                class="text-[28px] font-bold text-white transition-all duration-500 group-hover:text-glow"
+                >極真会館</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slogan -->
+      <h2
+        class="text-xl md:text-3xl font-heading text-white/90 tracking-[0.4em] mb-6 uppercase animate-fade-in font-light"
+      >
+        Der Weg der <span class="text-primary font-bold"
+          >ultimativen Wahrheit</span
+        >
+      </h2>
+
+      <div
+        class="flex flex-col md:flex-row gap-6 animate-fade-in"
+        style="animation-delay: 0.3s;"
+      >
+        <a
+          href="#trainingszeiten"
+          class="bg-primary hover:bg-red-700 text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all hover:shadow-[0_0_20px_rgba(214,0,28,0.4)] hover:-translate-y-1 text-lg skew-x-[-10deg]"
+        >
+          <span class="block skew-x-[10deg]">Probetraining</span>
+        </a>
+        <a
+          href="#about"
+          class="glass glass-hover text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all skew-x-[-10deg] text-lg"
+        >
+          <span class="block skew-x-[10deg]">Mehr Erfahren</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-32 bg-surface relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div
+      class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 reveal relative z-10">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <span class="h-[1px] w-12 bg-primary"></span>
+            <h2
+              class="text-primary font-heading text-sm tracking-[0.3em] uppercase"
+            >
+              OSU & SERVUS
+            </h2>
+          </div>
+          <h3
+            class="text-4xl md:text-6xl font-heading font-bold text-white mb-8 uppercase leading-tight"
+          >
+            Kyokushin im <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500"
+              >Bayerischen Wald</span
+            >
+          </h3>
+          <p class="text-gray-400 text-lg leading-loose mb-8 font-light">
+            Wir sind mehr als nur ein Sportverein – wir sind eine Gemeinschaft.
+            Neben unserer Halle für feste Trainingszeiten steht uns ein eigener
+            Kraft- und Ausdauerraum zur Verfügung, den wir <strong
+              class="text-white">gemeinsam renoviert haben</strong
+            >. Im Herzen des Bayerischen Waldes verbinden wir hartes
+            Kyokushin-Training mit echter bayerischer Kameradschaft und freuen
+            uns immer über Neuzugänge. Egal ob Groß oder Klein, hier ist jeder
+            willkommen.
+          </p>
+
+          <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
+            <div>
+              <span
+                class="block text-5xl font-heading font-bold text-white mb-2"
+                >2023</span
+              >
+              <span
+                class="text-sm text-primary uppercase tracking-widest font-bold"
+                >Gründungsjahr</span
+              >
+            </div>
+            <div>
+              <span
+                class="block text-5xl font-heading font-bold text-white mb-2"
+                >100%</span
+              >
+              <span
+                class="text-sm text-primary uppercase tracking-widest font-bold"
+                >Kyokushin Spirit</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative h-[500px] w-full glass group overflow-hidden reveal"
+          style="transition-delay: 0.2s;"
+        >
+          <!-- Dojo Slider -->
+          <div id="dojo-slider" class="absolute inset-0 z-0">
+            <img
+              src="/Dojo1.jpg"
+              alt="Dojo 1"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+            />
+            <img
+              src="/Dojo2.jpg"
+              alt="Dojo 2"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+            />
+            <img
+              src="/Dojo3.jpg"
+              alt="Dojo 3"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+            />
+            <img
+              src="/Dojo4.jpg"
+              alt="Dojo 4"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+            />
+            <img
+              src="/Dojo5.jpg"
+              alt="Dojo 5"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+            />
+          </div>
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-dark/40 group-hover:bg-dark/20 transition-all duration-500 z-10"
+          >
+          </div>
+
+          <!-- Decorative Corners -->
+          <div
+            class="absolute top-4 left-4 w-4 h-4 border-t border-l border-primary/50"
+          >
+          </div>
+          <div
+            class="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-primary/50"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING SECTION -->
+  <section id="training" class="py-32 bg-dark relative">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <h2
+          class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+        >
+          Training
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Wähle deinen Weg
+        </h3>
+        <p class="text-gray-400 text-lg font-light">
+          Egal ob Anfänger oder Wettkämpfer – wir haben das richtige Training
+          für dich.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1: Erwachsene -->
+        <div
+          class="glass glass-hover p-10 relative group reveal"
+          style="transition-delay: 0.1s;"
+        >
+          <h4
+            class="text-3xl font-bold text-white mb-6 group-hover:text-primary transition-colors"
+          >
+            ERWACHSENE
+          </h4>
+          <p class="text-gray-400 mb-8 leading-relaxed">
+            Das Fundament des Kyokushin. Technik, Kata und die Philosophie des
+            Kampfes.
+          </p>
+          <ul class="space-y-4 text-gray-300 mb-10">
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary"></span>Kihon (Grundschule)
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary"></span>Kata (Formen)
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary"></span>Kumite (Kampf)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Kämpfer (Highlight) -->
+        <div
+          class="glass p-10 relative group reveal border-primary/30 glow-hover"
+          style="transition-delay: 0.2s;"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-50 pointer-events-none"
+          >
+          </div>
+
+          <div class="flex justify-between items-start mb-6">
+            <h4
+              class="text-3xl font-bold text-white group-hover:text-glow transition-all"
+            >
+              KÄMPFER
+            </h4>
+            <span
+              class="bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest"
+              >Wettkampf</span
+            >
+          </div>
+
+          <p class="text-gray-300 mb-8 leading-relaxed relative z-10">
+            Für jene, die ihre Grenzen testen wollen. Intensives Sparring und
+            Wettkampfvorbereitung.
+          </p>
+          <ul class="space-y-4 text-gray-200 mb-10 relative z-10">
+            <li class="flex items-center gap-3">
+              <span
+                class="w-1.5 h-1.5 bg-primary drop-shadow-[0_0_5px_rgba(214,0,28,0.8)]"
+              ></span>Vollkontakt Sparring
+            </li>
+            <li class="flex items-center gap-3">
+              <span
+                class="w-1.5 h-1.5 bg-primary drop-shadow-[0_0_5px_rgba(214,0,28,0.8)]"
+              ></span>Pratzenarbeit
+            </li>
+            <li class="flex items-center gap-3">
+              <span
+                class="w-1.5 h-1.5 bg-primary drop-shadow-[0_0_5px_rgba(214,0,28,0.8)]"
+              ></span>Kondition & Härte
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Jugend -->
+        <div
+          class="glass glass-hover p-10 relative group reveal"
+          style="transition-delay: 0.3s;"
+        >
+          <h4
+            class="text-3xl font-bold text-white mb-6 group-hover:text-primary transition-colors"
+          >
+            JUGEND
+          </h4>
+          <p class="text-gray-400 mb-8 leading-relaxed">
+            Werte fürs Leben. Wir vermitteln Respekt, Disziplin und
+            Selbstvertrauen.
+          </p>
+          <ul class="space-y-4 text-gray-300 mb-10">
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary"></span>Disziplin
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary"></span>Koordination
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary"></span>Selbstverteidigung
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAININGSZEITEN (SCHEDULE) SECTION -->
+  <section
+    id="trainingszeiten"
+    class="py-32 bg-surface relative overflow-hidden"
+  >
+    <!-- Background Accent -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 reveal relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+        >
+          Wann & Wo
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Trainingsplan
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Standard Times (Winter/Regular) -->
+        <div class="space-y-6">
+          <h4
+            class="text-2xl font-heading font-bold text-white mb-6 border-b border-primary/30 pb-4"
+          >
+            Reguläre Trainingszeiten
+            <span
+              class="block text-xs text-gray-400 font-sans mt-1 tracking-normal text-transform-none opacity-70"
+              >(Winterhalbjahr)</span
+            >
+          </h4>
+
+          <!-- Monday Standard -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-primary/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-primary"
+                >MONTAG</span
+              >
+              <span class="text-white font-bold text-lg">18:00 - 20:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+
+          <!-- Friday Standard (Kids) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-primary/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-primary"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">15:30 - 16:30</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Kinder</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+
+          <!-- Friday Standard (Adults) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-primary/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-primary"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">16:30 - 18:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+        </div>
+
+        <!-- Summer Times -->
+        <div class="space-y-6">
+          <h4
+            class="text-2xl font-heading font-bold text-white mb-6 border-b border-yellow-500/30 pb-4 relative"
+          >
+            Sommerzeiten
+            <span class="absolute right-0 top-0 text-yellow-500/20 text-4xl"
+              >☀</span
+            >
+            <span
+              class="block text-xs text-gray-400 font-sans mt-1 tracking-normal text-transform-none opacity-70"
+              >(Bei schönem Wetter / Nach Ansage)</span
+            >
+          </h4>
+
+          <!-- Monday Summer -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-yellow-500/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-yellow-500"
+                >MONTAG</span
+              >
+              <span class="text-white font-bold text-lg">18:00 - 20:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">
+              Turnhalle Arrach (oder Outdoor)
+            </p>
+          </div>
+
+          <!-- Friday Summer (Kids) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-yellow-500/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-yellow-500"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">16:30 - 17:30</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Kinder</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+
+          <!-- Friday Summer (Adults) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-yellow-500/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-yellow-500"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">17:30 - 19:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-gray-500 text-sm">
+          Bitte 15 Minuten vor Trainingsbeginn erscheinen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="py-20 bg-dark relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+        >
+          Impressionen
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Galerie
+        </h3>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex justify-center flex-wrap gap-4 mb-12">
+        <button
+          class="gallery-tab active px-6 py-2 rounded-full border border-primary bg-primary text-white font-heading tracking-widest text-sm uppercase transition-all hover:bg-primary hover:text-white"
+          data-target="training"
+        >
+          Training
+        </button>
+        <button
+          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+          data-target="wintercamp"
+        >
+          Wintercamp
+        </button>
+        <button
+          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+          data-target="bergcamp"
+        >
+          Bergcamp
+        </button>
+        <button
+          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+          data-target="zeltlager"
+        >
+          Zeltlager
+        </button>
+      </div>
+
+      <!-- Gallery Grids -->
+      <div id="gallery-content" class="min-h-[400px]">
+        <!-- Training Grid -->
+        <div
+          id="training"
+          class="gallery-grid grid grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/111/444?text=Training+1"
+              alt="Training"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/111/444?text=Training+2"
+              alt="Training"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/111/444?text=Training+3"
+              alt="Training"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+
+        <!-- Wintercamp Grid -->
+        <div
+          id="wintercamp"
+          class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/112/555?text=Wintercamp+1"
+              alt="Wintercamp"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/112/555?text=Wintercamp+2"
+              alt="Wintercamp"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/112/555?text=Wintercamp+3"
+              alt="Wintercamp"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+
+        <!-- Bergcamp Grid -->
+        <div
+          id="bergcamp"
+          class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/223/666?text=Bergcamp+1"
+              alt="Bergcamp"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/223/666?text=Bergcamp+2"
+              alt="Bergcamp"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/223/666?text=Bergcamp+3"
+              alt="Bergcamp"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+
+        <!-- Zeltlager Grid -->
+        <div
+          id="zeltlager"
+          class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/334/777?text=Zeltlager+1"
+              alt="Zeltlager"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/334/777?text=Zeltlager+2"
+              alt="Zeltlager"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/334/777?text=Zeltlager+3"
+              alt="Zeltlager"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    id="contact"
+    class="bg-dark py-20 border-t border-white/10 relative overflow-hidden"
+  >
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2
+        class="text-4xl font-heading font-bold text-white mb-4 tracking-tighter"
+      >
+        KYOKUSHIN KARATE ARRACH
+      </h2>
+      <p class="text-gray-500 mb-10 text-sm tracking-widest uppercase">
+        Sparte des FC Ottenzell
+      </p>
+
+      <div class="flex flex-col items-center gap-6 mb-12">
+        <a
+          href="mailto:klaus-zellner@gmx.de"
+          class="text-xl text-white hover:text-primary transition-colors flex items-center gap-2"
+        >
+          <span
+            class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-sm"
+            >✉</span
+          >
+          klaus-zellner@gmx.de
+        </a>
+        <a
+          href="tel:+4915129805299"
+          class="text-3xl font-heading font-bold text-white hover:text-glow transition-all"
+        >
+          0151 / 29805299
+        </a>
+      </div>
+
+      <div
+        class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest"
+      >
+        <p>&copy; {new Date().getFullYear()} Kyokushin Karate Arrach</p>
+        <div class="flex gap-4 mt-4 md:mt-0">
+          <a href="/impressum" class="hover:text-white transition-colors"
+            >Impressum</a
+          >
+          <a href="/datenschutz" class="hover:text-white transition-colors"
+            >Datenschutz</a
+          >
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // Mobile Menu Toggle
+    const btn = document.querySelector(
+      '[data-collapse-toggle="navbar-default"]'
+    );
+    const menu = document.getElementById("navbar-default");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+
+    // Navbar Scroll Effect
+    const mainNav = document.getElementById("main-nav");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        mainNav.classList.add("nav-scrolled");
+        mainNav.classList.remove("py-4");
+        mainNav.classList.add("py-2");
+      } else {
+        mainNav.classList.remove("nav-scrolled");
+        mainNav.classList.remove("py-2");
+        mainNav.classList.add("py-4");
+      }
+    });
+
+    // Gallery Tabs
+    const galleryTabs = document.querySelectorAll(".gallery-tab");
+    const galleryGrids = document.querySelectorAll(".gallery-grid");
+
+    if (galleryTabs.length > 0) {
+      galleryTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active class from all tabs
+          galleryTabs.forEach((t) => {
+            t.classList.remove(
+              "active",
+              "bg-primary",
+              "text-white",
+              "border-primary"
+            );
+            t.classList.add("text-gray-400", "border-white/20");
+          });
+
+          // Add active class to clicked tab
+          tab.classList.add(
+            "active",
+            "bg-primary",
+            "text-white",
+            "border-primary"
+          );
+          tab.classList.remove("text-gray-400", "border-white/20");
+
+          // Hide all grids
+          galleryGrids.forEach((grid) => {
+            grid.classList.add("hidden");
+            grid.classList.remove("grid");
+          });
+
+          // Show target grid
+          const target = tab.getAttribute("data-target");
+          const targetGrid = document.getElementById(target);
+          if (targetGrid) {
+            targetGrid.classList.remove("hidden");
+            targetGrid.classList.add("grid");
+          }
+        });
+      });
+    }
+
+    // Intersection Observer for Scroll Animations
+    const observerOptions = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Dojo Slider
+    const dojoImages = document.querySelectorAll("#dojo-slider .slider-image");
+    let currentDojoImage = 0;
+
+    if (dojoImages.length > 0) {
+      setInterval(() => {
+        // Fade out current
+        dojoImages[currentDojoImage].classList.remove("opacity-100");
+        dojoImages[currentDojoImage].classList.add("opacity-0");
+
+        // Calculate next
+        currentDojoImage = (currentDojoImage + 1) % dojoImages.length;
+
+        // Fade in next
+        dojoImages[currentDojoImage].classList.remove("opacity-0");
+        dojoImages[currentDojoImage].classList.add("opacity-100");
+      }, 5000); // Change image every 5 seconds
+    }
+
+    // Fix: Force scroll to top on reload
+    if (history.scrollRestoration) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  </script>
+</Layout>

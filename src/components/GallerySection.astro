@@ -1,0 +1,184 @@
+<!-- GALLERY SECTION -->
+<section id="gallery" class="py-20 bg-dark relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+                class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+            >
+                Impressionen
+            </h2>
+            <h3
+                class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+            >
+                Galerie
+            </h3>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex justify-center flex-wrap gap-4 mb-12">
+            <button
+                class="gallery-tab active px-6 py-2 rounded-full border border-primary bg-primary text-white font-heading tracking-widest text-sm uppercase transition-all hover:bg-primary hover:text-white"
+                data-target="training"
+            >
+                Training
+            </button>
+            <button
+                class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+                data-target="wintercamp"
+            >
+                Wintercamp
+            </button>
+            <button
+                class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+                data-target="bergcamp"
+            >
+                Bergcamp
+            </button>
+            <button
+                class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+                data-target="zeltlager"
+            >
+                Zeltlager
+            </button>
+        </div>
+
+        <!-- Gallery Grids -->
+        <div id="gallery-content" class="min-h-[400px]">
+            <!-- Training Grid -->
+            <div
+                id="training"
+                class="gallery-grid grid grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+            >
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/111/444?text=Training+1"
+                        alt="Training"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/111/444?text=Training+2"
+                        alt="Training"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/111/444?text=Training+3"
+                        alt="Training"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+            </div>
+
+            <!-- Wintercamp Grid -->
+            <div
+                id="wintercamp"
+                class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+            >
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/112/555?text=Wintercamp+1"
+                        alt="Wintercamp"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/112/555?text=Wintercamp+2"
+                        alt="Wintercamp"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/112/555?text=Wintercamp+3"
+                        alt="Wintercamp"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+            </div>
+
+            <!-- Bergcamp Grid -->
+            <div
+                id="bergcamp"
+                class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+            >
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/223/666?text=Bergcamp+1"
+                        alt="Bergcamp"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/223/666?text=Bergcamp+2"
+                        alt="Bergcamp"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/223/666?text=Bergcamp+3"
+                        alt="Bergcamp"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+            </div>
+
+            <!-- Zeltlager Grid -->
+            <div
+                id="zeltlager"
+                class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+            >
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/334/777?text=Zeltlager+1"
+                        alt="Zeltlager"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/334/777?text=Zeltlager+2"
+                        alt="Zeltlager"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+                <div
+                    class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+                >
+                    <img
+                        src="https://placehold.co/600x400/334/777?text=Zeltlager+3"
+                        alt="Zeltlager"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
