@@ -195,16 +195,6 @@ h6 {
     pointer-events: all;
 }
 
-/* Brushstroke Section Divider */
-.brushstroke-divider {
-    width: 100%;
-    height: 24px;
-    background-image: url('/brushstroke-divider.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
     .reveal {
