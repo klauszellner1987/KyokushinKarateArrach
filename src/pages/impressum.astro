@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Impressum - Kyokushin Karate Arrach" description="Impressum und rechtliche Angaben der Kyokushin Karate Arrach Webseite.">
@@ -29,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
                 >
                     <li>
                         <a
-                            href="/home"
+                            href={`${base}home`}
                             class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
                             >ZURÜCK ZUR STARTSEITE</a
                         >
