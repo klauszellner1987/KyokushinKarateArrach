@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL;
   <div class="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden select-none">
 
     <!-- Noise Texture Overlay -->
-    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={`background-image: url('${base}noise.svg'); background-repeat: repeat;`}></div>
+    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={`background-image: url('${base}/noise.svg'); background-repeat: repeat;`}></div>
 
     <!-- Dojo Kun Kanji Rain – jede Spalte = eine vollstaendige Zeile in korrekter Reihenfolge -->
     <div class="absolute inset-0 z-[1] overflow-hidden pointer-events-none kanji-rain" aria-hidden="true">
@@ -38,7 +38,7 @@ const base = import.meta.env.BASE_URL;
 
     <!-- Kyokushinkai SVG Watermark -->
     <img
-      src={`${base}Kyokushinkai.svg`}
+      src={`${base}/Kyokushinkai.svg`}
       alt=""
       aria-hidden="true"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[70vh] w-auto opacity-[0.04] invert brightness-200 pointer-events-none"
@@ -65,7 +65,7 @@ const base = import.meta.env.BASE_URL;
     <!-- Enter Site Link -->
     <a
       id="enter-link"
-      href={`${base}home`}
+      href={`${base}/home`}
       class="absolute bottom-16 z-10 flex flex-col items-center gap-1 text-gray-600 hover:text-white transition-colors duration-500 intro-pulse intro-animate"
       style="animation-delay: 1.5s;"
     >
