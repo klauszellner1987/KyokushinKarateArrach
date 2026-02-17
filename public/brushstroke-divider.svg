@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" preserveAspectRatio="none">
+  <path
+    d="M0 12 C50 8, 80 16, 150 11 S250 6, 350 13 S450 18, 550 10 S650 4, 750 14 S850 19, 950 9 S1050 5, 1150 13 L1200 12"
+    stroke="#D6001C"
+    stroke-width="3"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.7"
+  />
+  <path
+    d="M0 14 C60 10, 100 18, 180 12 S280 7, 380 15 S480 20, 580 11 S680 5, 780 16 S880 21, 980 10 S1080 6, 1180 14 L1200 13"
+    stroke="#D6001C"
+    stroke-width="1.5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.3"
+  />
+</svg>

@@ -1,0 +1,1005 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- Skip to Content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:font-heading focus:uppercase focus:tracking-widest">
+    Zum Inhalt springen
+  </a>
+
+  <!-- NAVIGATION -->
+  <nav
+    id="main-nav"
+    class="fixed w-full z-50 top-0 start-0 border-b border-white/5 bg-transparent transition-all duration-500 py-4"
+  >
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4 md:px-0"
+    >
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-white/10"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Hauptmenü öffnen</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-heading flex flex-col p-4 md:p-0 mt-4 border border-white/10 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:border-0 uppercase tracking-widest text-sm items-center justify-center"
+        >
+          <li>
+            <a
+              href="#about"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >DOJO</a
+            >
+          </li>
+          <li>
+            <a
+              href="#training"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >TRAINING</a
+            >
+          </li>
+          <li>
+            <a
+              href="#trainingszeiten"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >ZEITEN</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >GALERIE</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors uppercase"
+              >KONTAKT</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+  <!-- HERO SECTION -->
+  <header
+    id="home"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+  >
+    <!-- Background: subtle bottom fade only -->
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-dark to-transparent"
+      >
+      </div>
+    </div>
+
+    <!-- Centered Content -->
+    <div
+      class="relative z-10 container mx-auto px-4 text-center flex flex-col items-center justify-center min-h-screen py-20"
+    >
+      <!-- Main Logo -->
+      <div class="mb-10 animate-zoom-in">
+        <img
+          src="/hero-logo.png"
+          alt="Logo des Kyokushin Karate Vereins Arrach"
+          class="w-full max-w-[280px] md:max-w-[400px] lg:max-w-[460px] h-auto mx-auto"
+          width="500"
+          height="500"
+        />
+      </div>
+
+      <!-- Slogan -->
+      <h2
+        class="text-lg md:text-2xl font-heading text-white/80 tracking-[0.4em] mb-10 uppercase animate-fade-in font-light"
+      >
+        Der Weg der <span class="text-primary font-bold">ultimativen Wahrheit</span>
+      </h2>
+
+      <!-- CTA Buttons (clean, no skew) -->
+      <div
+        class="flex flex-col md:flex-row gap-6 animate-fade-in delay-300"
+      >
+        <a
+          href="#trainingszeiten"
+          class="bg-primary hover:bg-red-700 text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all hover:shadow-[0_0_20px_rgba(214,0,28,0.4)] hover:-translate-y-1 text-base"
+        >
+          Probetraining
+        </a>
+        <a
+          href="#about"
+          class="border border-white/20 hover:border-white/40 text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all hover:-translate-y-1 text-base"
+        >
+          Mehr Erfahren
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Brushstroke Divider -->
+  <div class="brushstroke-divider bg-surface"></div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-36 bg-surface relative overflow-hidden">
+
+    <div class="container mx-auto px-4 reveal relative z-10">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <span class="h-[1px] w-12 bg-primary"></span>
+            <h2
+              class="text-primary font-heading text-sm tracking-[0.3em] uppercase"
+            >
+              OSU & SERVUS
+            </h2>
+          </div>
+          <h3
+            class="text-4xl md:text-6xl font-heading font-bold text-white mb-8 uppercase leading-tight"
+          >
+            Kyokushin im <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500"
+              >Bayerischen Wald</span
+            >
+          </h3>
+          <p class="text-gray-400 text-lg leading-loose mb-8 font-light">
+            Wir sind mehr als nur ein Sportverein – wir sind eine Gemeinschaft.
+            Neben unserer Halle für feste Trainingszeiten steht uns ein eigener
+            Kraft- und Ausdauerraum zur Verfügung, den wir <strong
+              class="text-white">gemeinsam renoviert haben</strong
+            >. Im Herzen des Bayerischen Waldes verbinden wir hartes
+            Kyokushin-Training mit echter bayerischer Kameradschaft und freuen
+            uns immer über Neuzugänge. Egal ob Groß oder Klein, hier ist jeder
+            willkommen.
+          </p>
+
+          <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
+            <div>
+              <span
+                class="block text-5xl font-heading font-bold text-white mb-2"
+                >2023</span
+              >
+              <span
+                class="text-sm text-primary uppercase tracking-widest font-bold"
+                >Gründungsjahr</span
+              >
+            </div>
+            <div>
+              <span
+                class="block text-5xl font-heading font-bold text-white mb-2"
+                >100%</span
+              >
+              <span
+                class="text-sm text-primary uppercase tracking-widest font-bold"
+                >Kyokushin Spirit</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative h-[500px] w-full glass group overflow-hidden reveal delay-200"
+        >
+          <!-- Dojo Slider -->
+          <div id="dojo-slider" class="absolute inset-0 z-0">
+            <img
+              src="/Dojo1.jpg"
+              alt="Trainingshalle des Kyokushin Karate Dojos in Arrach"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+              width="800"
+              height="500"
+            />
+            <img
+              src="/Dojo2.jpg"
+              alt="Karate-Training im Dojo Arrach"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+              loading="lazy"
+              width="800"
+              height="500"
+            />
+            <img
+              src="/Dojo3.jpg"
+              alt="Gemeinsames Training der Kyokushin-Gemeinschaft"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+              loading="lazy"
+              width="800"
+              height="500"
+            />
+            <img
+              src="/Dojo4.jpg"
+              alt="Kraft- und Ausdauerraum des Vereins"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+              loading="lazy"
+              width="800"
+              height="500"
+            />
+            <img
+              src="/Dojo5.jpg"
+              alt="Vereinsleben im Kyokushin Karate Arrach"
+              class="slider-image absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+              loading="lazy"
+              width="800"
+              height="500"
+            />
+          </div>
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-dark/40 group-hover:bg-dark/20 transition-all duration-500 z-10"
+          >
+          </div>
+
+          <!-- Decorative Corners -->
+          <div
+            class="absolute top-4 left-4 w-4 h-4 border-t border-l border-primary/50"
+          >
+          </div>
+          <div
+            class="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-primary/50"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brushstroke Divider -->
+  <div class="brushstroke-divider bg-dark"></div>
+
+  <!-- TRAINING SECTION -->
+  <section id="training" class="py-36 bg-dark relative">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <h2
+          class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+        >
+          Training
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Wähle deinen Weg
+        </h3>
+        <p class="text-gray-400 text-lg font-light">
+          Egal ob Anfänger oder Wettkämpfer – wir haben das richtige Training
+          für dich.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Card 1: Erwachsene -->
+        <div
+          class="bg-white/[0.03] border border-white/10 p-10 relative group reveal delay-100 hover:border-white/20 transition-all duration-300"
+        >
+          <div class="w-16 h-[3px] bg-primary mb-8 transition-all duration-300 group-hover:w-24"></div>
+          <h4
+            class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors"
+          >
+            ERWACHSENE
+          </h4>
+          <p class="text-gray-400 mb-8 leading-relaxed font-light">
+            Das Fundament des Kyokushin. Technik, Kata und die Philosophie des
+            Kampfes.
+          </p>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Kihon (Grundschule)
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Kata (Formen)
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Kumite (Kampf)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Kämpfer (Highlight) -->
+        <div
+          class="bg-white/[0.03] border border-primary/30 p-10 relative group reveal delay-200 hover:border-primary/50 transition-all duration-300"
+        >
+          <div class="w-16 h-[3px] bg-primary mb-8 transition-all duration-300 group-hover:w-24"></div>
+          <div class="flex justify-between items-start mb-6">
+            <h4
+              class="text-2xl font-bold text-white group-hover:text-primary transition-colors"
+            >
+              KÄMPFER
+            </h4>
+            <span
+              class="bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest"
+              >Wettkampf</span
+            >
+          </div>
+
+          <p class="text-gray-400 mb-8 leading-relaxed font-light">
+            Für jene, die ihre Grenzen testen wollen. Intensives Sparring und
+            Wettkampfvorbereitung.
+          </p>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Vollkontakt Sparring
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Pratzenarbeit
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Kondition & Härte
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Jugend -->
+        <div
+          class="bg-white/[0.03] border border-white/10 p-10 relative group reveal delay-300 hover:border-white/20 transition-all duration-300"
+        >
+          <div class="w-16 h-[3px] bg-primary mb-8 transition-all duration-300 group-hover:w-24"></div>
+          <h4
+            class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors"
+          >
+            JUGEND
+          </h4>
+          <p class="text-gray-400 mb-8 leading-relaxed font-light">
+            Werte fürs Leben. Wir vermitteln Respekt, Disziplin und
+            Selbstvertrauen.
+          </p>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Disziplin
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Koordination
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>Selbstverteidigung
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brushstroke Divider -->
+  <div class="brushstroke-divider bg-surface"></div>
+
+  <!-- TRAININGSZEITEN (SCHEDULE) SECTION -->
+  <section
+    id="trainingszeiten"
+    class="py-36 bg-surface relative overflow-hidden"
+  >
+    <div class="container mx-auto px-4 reveal relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+        >
+          Wann & Wo
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Trainingsplan
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Standard Times (Winter/Regular) -->
+        <div class="space-y-6">
+          <h4
+            class="text-2xl font-heading font-bold text-white mb-6 border-b border-primary/30 pb-4"
+          >
+            Reguläre Trainingszeiten
+            <span
+              class="block text-xs text-gray-400 font-sans mt-1 tracking-normal text-transform-none opacity-70"
+              >(Winterhalbjahr)</span
+            >
+          </h4>
+
+          <!-- Monday Standard -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-primary/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-primary"
+                >MONTAG</span
+              >
+              <span class="text-white font-bold text-lg">18:00 - 20:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+
+          <!-- Friday Standard (Kids) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-primary/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-primary"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">15:30 - 16:30</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Kinder</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+
+          <!-- Friday Standard (Adults) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-primary/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-primary"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">16:30 - 18:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+        </div>
+
+        <!-- Summer Times -->
+        <div class="space-y-6">
+          <h4
+            class="text-2xl font-heading font-bold text-white mb-6 border-b border-yellow-500/30 pb-4 relative"
+          >
+            Sommerzeiten
+            <span class="absolute right-0 top-0 text-yellow-500/20 text-4xl"
+              >☀</span
+            >
+            <span
+              class="block text-xs text-gray-400 font-sans mt-1 tracking-normal text-transform-none opacity-70"
+              >(Bei schönem Wetter / Nach Ansage)</span
+            >
+          </h4>
+
+          <!-- Monday Summer -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-yellow-500/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-yellow-500"
+                >MONTAG</span
+              >
+              <span class="text-white font-bold text-lg">18:00 - 20:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">
+              Turnhalle Arrach (oder Outdoor)
+            </p>
+          </div>
+
+          <!-- Friday Summer (Kids) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-yellow-500/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-yellow-500"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">16:30 - 17:30</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Kinder</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+
+          <!-- Friday Summer (Adults) -->
+          <div
+            class="glass p-6 flex flex-col items-start gap-2 group hover:border-yellow-500/50 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between w-full mb-2">
+              <span class="font-heading font-bold text-xl text-yellow-500"
+                >FREITAG</span
+              >
+              <span class="text-white font-bold text-lg">17:30 - 19:00</span>
+            </div>
+            <span class="text-sm text-gray-400 uppercase tracking-widest"
+              >Erwachsene</span
+            >
+            <p class="text-xs text-gray-600 mt-1">Turnhalle Arrach</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-gray-500 text-sm">
+          Bitte 15 Minuten vor Trainingsbeginn erscheinen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brushstroke Divider -->
+  <div class="brushstroke-divider bg-dark"></div>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="py-24 bg-dark relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-primary font-heading text-sm tracking-[0.3em] mb-4 uppercase"
+        >
+          Impressionen
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Galerie
+        </h3>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex justify-center flex-wrap gap-4 mb-12" role="tablist" aria-label="Galerie-Kategorien">
+        <button
+          class="gallery-tab active px-6 py-2 rounded-full border border-primary bg-primary text-white font-heading tracking-widest text-sm uppercase transition-all hover:bg-primary hover:text-white"
+          data-target="training"
+          role="tab"
+          aria-selected="true"
+          aria-controls="training"
+          id="tab-training"
+        >
+          Training
+        </button>
+        <button
+          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+          data-target="wintercamp"
+          role="tab"
+          aria-selected="false"
+          aria-controls="wintercamp"
+          id="tab-wintercamp"
+        >
+          Wintercamp
+        </button>
+        <button
+          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+          data-target="bergcamp"
+          role="tab"
+          aria-selected="false"
+          aria-controls="bergcamp"
+          id="tab-bergcamp"
+        >
+          Bergcamp
+        </button>
+        <button
+          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
+          data-target="zeltlager"
+          role="tab"
+          aria-selected="false"
+          aria-controls="zeltlager"
+          id="tab-zeltlager"
+        >
+          Zeltlager
+        </button>
+      </div>
+
+      <!-- Gallery Grids -->
+      <div id="gallery-content" class="min-h-[400px]">
+        <!-- Training Grid -->
+        <div
+          id="training"
+          class="gallery-grid grid grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+          role="tabpanel"
+          aria-labelledby="tab-training"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/111/444?text=Training+1"
+              alt="Kyokushin Karate Training - Aufnahme 1"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/111/444?text=Training+2"
+              alt="Kyokushin Karate Training - Aufnahme 2"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/111/444?text=Training+3"
+              alt="Kyokushin Karate Training - Aufnahme 3"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <!-- Wintercamp Grid -->
+        <div
+          id="wintercamp"
+          class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+          role="tabpanel"
+          aria-labelledby="tab-wintercamp"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/112/555?text=Wintercamp+1"
+              alt="Wintercamp des Kyokushin Karate Arrach - Aufnahme 1"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/112/555?text=Wintercamp+2"
+              alt="Wintercamp des Kyokushin Karate Arrach - Aufnahme 2"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/112/555?text=Wintercamp+3"
+              alt="Wintercamp des Kyokushin Karate Arrach - Aufnahme 3"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <!-- Bergcamp Grid -->
+        <div
+          id="bergcamp"
+          class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+          role="tabpanel"
+          aria-labelledby="tab-bergcamp"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/223/666?text=Bergcamp+1"
+              alt="Bergcamp des Kyokushin Karate Arrach - Aufnahme 1"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/223/666?text=Bergcamp+2"
+              alt="Bergcamp des Kyokushin Karate Arrach - Aufnahme 2"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/223/666?text=Bergcamp+3"
+              alt="Bergcamp des Kyokushin Karate Arrach - Aufnahme 3"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+
+        <!-- Zeltlager Grid -->
+        <div
+          id="zeltlager"
+          class="gallery-grid hidden grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in"
+          role="tabpanel"
+          aria-labelledby="tab-zeltlager"
+        >
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/334/777?text=Zeltlager+1"
+              alt="Zeltlager des Kyokushin Karate Arrach - Aufnahme 1"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/334/777?text=Zeltlager+2"
+              alt="Zeltlager des Kyokushin Karate Arrach - Aufnahme 2"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div
+            class="aspect-video bg-white/5 rounded-lg overflow-hidden group relative"
+          >
+            <img
+              src="https://placehold.co/600x400/334/777?text=Zeltlager+3"
+              alt="Zeltlager des Kyokushin Karate Arrach - Aufnahme 3"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Brushstroke Divider -->
+  <div class="brushstroke-divider bg-dark"></div>
+
+  <!-- FOOTER -->
+  <footer
+    id="contact"
+    class="bg-dark py-20 border-t border-white/10 relative overflow-hidden"
+  >
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2
+        class="text-4xl font-heading font-bold text-white mb-4 tracking-tighter"
+      >
+        KYOKUSHIN KARATE ARRACH
+      </h2>
+      <p class="text-gray-500 mb-10 text-sm tracking-widest uppercase">
+        Sparte des FC Ottenzell
+      </p>
+
+      <div class="flex flex-col items-center gap-6 mb-12">
+        <a
+          href="mailto:klaus-zellner@gmx.de"
+          class="text-xl text-white hover:text-primary transition-colors flex items-center gap-2"
+        >
+          <span
+            class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-sm"
+            >✉</span
+          >
+          klaus-zellner@gmx.de
+        </a>
+        <a
+          href="tel:+4915129805299"
+          class="text-3xl font-heading font-bold text-white hover:text-glow transition-all"
+        >
+          0151 / 29805299
+        </a>
+      </div>
+
+      <div
+        class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest"
+      >
+        <p>&copy; {new Date().getFullYear()} Kyokushin Karate Arrach</p>
+        <div class="flex gap-4 mt-4 md:mt-0">
+          <a href="/impressum" class="hover:text-white transition-colors"
+            >Impressum</a
+          >
+          <a href="/datenschutz" class="hover:text-white transition-colors"
+            >Datenschutz</a
+          >
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // Mobile Menu Toggle with aria-expanded
+    const btn = document.querySelector(
+      '[data-collapse-toggle="navbar-default"]'
+    );
+    const menu = document.getElementById("navbar-default");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        const isExpanded = !menu.classList.contains("hidden");
+        btn.setAttribute("aria-expanded", String(isExpanded));
+      });
+
+      // Close mobile menu when a nav link is clicked
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Navbar Scroll Effect (throttled with requestAnimationFrame)
+    const mainNav = document.getElementById("main-nav");
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 50) {
+            mainNav.classList.add("nav-scrolled");
+            mainNav.classList.remove("py-4");
+            mainNav.classList.add("py-2");
+          } else {
+            mainNav.classList.remove("nav-scrolled");
+            mainNav.classList.remove("py-2");
+            mainNav.classList.add("py-4");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Gallery Tabs with ARIA support and keyboard navigation
+    const galleryTabs = document.querySelectorAll(".gallery-tab");
+    const galleryGrids = document.querySelectorAll(".gallery-grid");
+
+    function activateTab(tab) {
+      // Remove active state from all tabs
+      galleryTabs.forEach((t) => {
+        t.classList.remove("active", "bg-primary", "text-white", "border-primary");
+        t.classList.add("text-gray-400", "border-white/20");
+        t.setAttribute("aria-selected", "false");
+        t.setAttribute("tabindex", "-1");
+      });
+
+      // Activate clicked tab
+      tab.classList.add("active", "bg-primary", "text-white", "border-primary");
+      tab.classList.remove("text-gray-400", "border-white/20");
+      tab.setAttribute("aria-selected", "true");
+      tab.setAttribute("tabindex", "0");
+      tab.focus();
+
+      // Hide all grids
+      galleryGrids.forEach((grid) => {
+        grid.classList.add("hidden");
+        grid.classList.remove("grid");
+      });
+
+      // Show target grid
+      const target = tab.getAttribute("data-target");
+      const targetGrid = document.getElementById(target);
+      if (targetGrid) {
+        targetGrid.classList.remove("hidden");
+        targetGrid.classList.add("grid");
+      }
+    }
+
+    if (galleryTabs.length > 0) {
+      // Set initial tabindex
+      galleryTabs.forEach((tab, index) => {
+        tab.setAttribute("tabindex", index === 0 ? "0" : "-1");
+        tab.addEventListener("click", () => activateTab(tab));
+      });
+
+      // Keyboard navigation (arrow keys)
+      const tabList = document.querySelector('[role="tablist"]');
+      if (tabList) {
+        tabList.addEventListener("keydown", (e) => {
+          const tabs = Array.from(galleryTabs);
+          const currentIndex = tabs.indexOf(document.activeElement);
+
+          let nextIndex;
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            nextIndex = (currentIndex + 1) % tabs.length;
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+          } else if (e.key === "Home") {
+            e.preventDefault();
+            nextIndex = 0;
+          } else if (e.key === "End") {
+            e.preventDefault();
+            nextIndex = tabs.length - 1;
+          }
+
+          if (nextIndex !== undefined) {
+            activateTab(tabs[nextIndex]);
+          }
+        });
+      }
+    }
+
+    // Intersection Observer for Scroll Animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Dojo Slider with cleanup
+    const dojoImages = document.querySelectorAll("#dojo-slider .slider-image");
+    let currentDojoImage = 0;
+
+    if (dojoImages.length > 0) {
+      const sliderId = setInterval(() => {
+        dojoImages[currentDojoImage].classList.remove("opacity-100");
+        dojoImages[currentDojoImage].classList.add("opacity-0");
+
+        currentDojoImage = (currentDojoImage + 1) % dojoImages.length;
+
+        dojoImages[currentDojoImage].classList.remove("opacity-0");
+        dojoImages[currentDojoImage].classList.add("opacity-100");
+      }, 5000);
+
+      window.addEventListener("beforeunload", () => clearInterval(sliderId));
+    }
+
+    // Fix: Force scroll to top on reload
+    if (history.scrollRestoration) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  </script>
+</Layout>

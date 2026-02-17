@@ -131,3 +131,116 @@ h6 {
 @utility text-glow {
     text-shadow: 0 0 10px rgba(214, 0, 28, 0.5);
 }
+
+/* Intro Page Animations */
+@keyframes gentle-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+
+.intro-pulse {
+    animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes intro-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-animate {
+    opacity: 0;
+    animation: intro-fade-in 1.5s ease-out forwards;
+}
+
+/* Dojo Kun Kanji Rain */
+@keyframes kanji-fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.kanji-column {
+    position: absolute;
+    top: 0;
+    writing-mode: vertical-rl;
+    color: white;
+    white-space: nowrap;
+    letter-spacing: 0.25em;
+    animation: kanji-fall linear infinite;
+    will-change: transform;
+}
+
+/* Intro Exit Overlay */
+.intro-exit-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease-in;
+}
+
+.intro-exit-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Brushstroke Section Divider */
+.brushstroke-divider {
+    width: 100%;
+    height: 24px;
+    background-image: url('/brushstroke-divider.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .animate-fade-in,
+    .animate-zoom-in {
+        animation: none;
+    }
+
+    .slider-image {
+        transition: none;
+    }
+
+    .intro-animate {
+        opacity: 1;
+        animation: none;
+    }
+
+    .intro-pulse {
+        animation: none;
+        opacity: 0.6;
+    }
+
+    .kanji-rain {
+        display: none;
+    }
+
+    .intro-exit-overlay {
+        transition: none;
+    }
+}

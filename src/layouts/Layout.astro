@@ -1,19 +1,36 @@
 ---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "Kyokushin Karate Arrach",
+	description = "Kyokushin Karate Arrach – Kampfkunst im Bayerischen Wald. Trainiere Vollkontakt-Karate in unserer Gemeinschaft. Sparte des FC Ottenzell e.V."
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="de">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Kyokushin Karate Arrach</title>
-		
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#0a0a0a" />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content="Kyokushin Karate Arrach" />
+
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-		
+
 		<!-- Tailwind CSS -->
 		<link rel="stylesheet" href="/src/styles/app.css" />
 	</head>
@@ -21,6 +38,3 @@
 		<slot />
 	</body>
 </html>
-<style>
-	body { margin: 0; font-family: sans-serif; background: #eee; color: #333; }
-</style>
