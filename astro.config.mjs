@@ -5,8 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://klauszellner1987.github.io',
-  base: '/KyokushinKarateArrach',
+  site: 'https://kyokushin-karate-arrach.de',
   vite: {
     plugins: [tailwindcss()]
   }
