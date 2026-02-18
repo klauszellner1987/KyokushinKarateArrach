@@ -656,16 +656,6 @@ import Layout from "../layouts/Layout.astro";
         >
           Bergcamp
         </button>
-        <button
-          class="gallery-tab px-6 py-2 rounded-full border border-white/20 text-gray-400 font-heading tracking-widest text-sm uppercase transition-all hover:border-primary hover:text-white"
-          data-target="zeltlager"
-          role="tab"
-          aria-selected="false"
-          aria-controls="zeltlager"
-          id="tab-zeltlager"
-        >
-          Zeltlager
-        </button>
       </div>
 
       <!-- Gallery Sliders -->
@@ -775,29 +765,61 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
 
-        <!-- Bergcamp -->
+        <!-- Bergcamp Slider -->
         <div
           id="bergcamp"
           class="gallery-grid hidden animate-fade-in"
           role="tabpanel"
           aria-labelledby="tab-bergcamp"
         >
-          <div class="flex items-center justify-center min-h-[300px]">
-            <p class="text-gray-500 font-heading text-lg tracking-widest uppercase">Bilder folgen in Kürze</p>
+          <div class="relative group/slider">
+            <button class="slider-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/80 text-white rounded-full opacity-0 group-hover/slider:opacity-100 transition-opacity" aria-label="Zurück">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="gallery-slider flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="0">
+                <img src="/Bergcamp_2023-77.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="1">
+                <img src="/Bergcamp_2023-78.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="2">
+                <img src="/Bergcamp_2023-79.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="3">
+                <img src="/Bergcamp_2023-87.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="4">
+                <img src="/Bergcamp_2023-145.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="5">
+                <img src="/Bergcamp_2023-157.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="6">
+                <img src="/Bergcamp_2023-158.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="7">
+                <img src="/Bergcamp_2023-190.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="8">
+                <img src="/Bergcamp_2023-216.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="9">
+                <img src="/Bergcamp_2023-228.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="10">
+                <img src="/Bergcamp_2023-230.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+              <div class="gallery-slide snap-start shrink-0 w-[85%] md:w-[calc(33.333%-0.67rem)] aspect-video bg-white/5 rounded-lg overflow-hidden cursor-pointer group" data-index="11">
+                <img src="/Bergcamp_2023-245.jpg" alt="Bergcamp Kyokushin Karate Arrach" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              </div>
+            </div>
+            <button class="slider-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/80 text-white rounded-full opacity-0 group-hover/slider:opacity-100 transition-opacity" aria-label="Weiter">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
 
-        <!-- Zeltlager -->
-        <div
-          id="zeltlager"
-          class="gallery-grid hidden animate-fade-in"
-          role="tabpanel"
-          aria-labelledby="tab-zeltlager"
-        >
-          <div class="flex items-center justify-center min-h-[300px]">
-            <p class="text-gray-500 font-heading text-lg tracking-widest uppercase">Bilder folgen in Kürze</p>
-          </div>
-        </div>
       </div>
     </div>
 
