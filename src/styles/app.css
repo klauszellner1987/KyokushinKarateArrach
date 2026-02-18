@@ -87,6 +87,10 @@
     color: transparent;
 }
 
+.writing-vertical {
+    writing-mode: vertical-rl;
+}
+
 /* Global Styles */
 html {
     scroll-behavior: smooth;

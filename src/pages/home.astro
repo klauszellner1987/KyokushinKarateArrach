@@ -97,18 +97,26 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
 
+    <!-- Kyokushinkai SVG Watermark -->
+    <img
+      src="/Kyokushinkai.svg"
+      alt=""
+      aria-hidden="true"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[80vh] w-auto opacity-[0.12] invert brightness-200 pointer-events-none z-[1]"
+    />
+
     <!-- Centered Content -->
     <div
       class="relative z-10 container mx-auto px-4 text-center flex flex-col items-center justify-center min-h-screen py-20"
     >
       <!-- Main Logo -->
-      <div class="mb-10 animate-zoom-in">
+      <div class="mb-10 animate-zoom-in -translate-x-[8%]">
         <img
           src="/hero-logo.png"
           alt="Logo des Kyokushin Karate Vereins Arrach"
-          class="w-full max-w-[280px] md:max-w-[400px] lg:max-w-[460px] h-auto mx-auto"
-          width="500"
-          height="500"
+          class="w-full max-w-[480px] md:max-w-[680px] lg:max-w-[860px] h-auto mx-auto"
+          width="1200"
+          height="582"
         />
       </div>
 
