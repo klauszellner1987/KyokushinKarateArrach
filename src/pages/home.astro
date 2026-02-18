@@ -66,6 +66,13 @@ import Layout from "../layouts/Layout.astro";
           </li>
           <li>
             <a
+              href="#beitraege"
+              class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
+              >BEITRÄGE</a
+            >
+          </li>
+          <li>
+            <a
               href="#gallery"
               class="nav-link-animated block py-2 text-white/80 hover:text-white transition-colors"
               >GALERIE</a
@@ -531,6 +538,72 @@ import Layout from "../layouts/Layout.astro";
       <div class="mt-12 text-center">
         <p class="text-gray-500 text-sm">
           Bitte 15 Minuten vor Trainingsbeginn erscheinen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEITRÄGE SECTION -->
+  <section id="beitraege" class="py-36 bg-dark relative overflow-hidden">
+    <div class="container mx-auto px-4 reveal relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="h-[1px] w-12 bg-primary"></span>
+          <h2
+            class="text-primary font-heading text-sm tracking-[0.3em] uppercase"
+          >
+            Fair & Für Jeden
+          </h2>
+          <span class="h-[1px] w-12 bg-primary"></span>
+        </div>
+        <h3
+          class="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6"
+        >
+          Beiträge
+        </h3>
+        <p class="text-gray-400 text-lg font-light leading-relaxed">
+          Kyokushin ist keine teure Kampfsportschule – sondern echte Kampfkunst,
+          die für jeden zugänglich sein soll. Egal ob Kind oder Erwachsener:
+          Bei uns soll der Beitrag niemals eine Hürde sein.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+        <!-- Card 1: Vereinsbeitrag -->
+        <div
+          class="glass p-8 text-center group hover:border-white/20 transition-all duration-300"
+        >
+          <span class="block text-sm text-primary uppercase tracking-widest font-bold mb-4">Vereinsbeitrag</span>
+          <span class="block text-4xl font-heading font-bold text-white mb-2">FC Ottenzell</span>
+          <p class="text-gray-400 text-sm leading-relaxed mt-4">
+            Als Sparte des FC Ottenzell e.V. gelten die regulären
+            Jahresmitgliedsbeiträge des Vereins. Diese werden direkt
+            über den FC Ottenzell abgerechnet.
+          </p>
+        </div>
+
+        <!-- Card 2: Spartengebühr -->
+        <div
+          class="glass p-8 text-center border-primary/30 group hover:border-primary/50 transition-all duration-300"
+        >
+          <span class="block text-sm text-primary uppercase tracking-widest font-bold mb-4">Spartengebühr Karate</span>
+          <div class="flex items-baseline justify-center gap-1 mb-2">
+            <span class="text-5xl font-heading font-bold text-white">5</span>
+            <span class="text-2xl font-heading font-bold text-white">€</span>
+            <span class="text-gray-400 text-base ml-1">/ Monat</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-4">
+            Pro Teilnehmer – für Trainingsmaterial, Hallennutzung
+            und die gesamte Organisation unserer Karate-Sparte.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-2xl mx-auto text-center border-t border-white/10 pt-10">
+        <p class="text-gray-500 text-sm leading-relaxed">
+          Wir wollen, dass jeder die Möglichkeit hat, Kyokushin Karate zu erlernen.
+          Falls der Beitrag für dich ein Problem darstellt, sprich uns einfach an –
+          wir finden eine Lösung. <span class="text-primary font-bold">OSU!</span>
         </p>
       </div>
     </div>
