@@ -179,7 +179,7 @@ h6 {
     color: white;
     white-space: nowrap;
     letter-spacing: 0.25em;
-    animation: kanji-fall linear infinite;
+    animation: kanji-fall linear infinite backwards;
     will-change: transform;
 }
 
