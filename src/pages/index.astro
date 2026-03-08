@@ -1,98 +1,218 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const baseObj = import.meta.env.BASE_URL;
+const base = baseObj.endsWith("/") ? baseObj : baseObj + "/";
 ---
 
-<Layout title="Kyokushin Karate Arrach" description="Kyokushin Karate Arrach – Kampfkunst im Bayerischen Wald. Trainiere Vollkontakt-Karate in unserer Gemeinschaft. Sparte des FC Ottenzell e.V.">
-  <div class="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden select-none">
-
+<Layout
+  title="Kyokushin Karate Arrach"
+  description="Kyokushin Karate Arrach – Kampfkunst im Bayerischen Wald. Trainiere Vollkontakt-Karate in unserer Gemeinschaft. Sparte des FC Ottenzell e.V."
+>
+  <div
+    class="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden select-none"
+  >
     <!-- Noise Texture Overlay -->
-    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style="background-image: url('/noise.svg'); background-repeat: repeat;"></div>
+    <div
+      class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+      style={`background-image: url('${base}noise.svg'); background-repeat: repeat;`}
+    >
+    </div>
 
     <!-- Dojo Kun Kanji Rain – jede Spalte = eine vollstaendige Zeile in korrekter Reihenfolge -->
-    <div class="absolute inset-0 z-[1] overflow-hidden pointer-events-none kanji-rain" aria-hidden="true">
+    <div
+      class="absolute inset-0 z-[1] overflow-hidden pointer-events-none kanji-rain"
+      aria-hidden="true"
+    >
       <!-- Erste Welle: Zeilen 1–7 -->
-      <div class="kanji-column font-japanese" style="left: 2%; animation-duration: 18s; animation-delay: 0s; font-size: 1rem; opacity: 0.12;">一、我々は、心身を錬磨し、確固不抜の心技を極めること</div>
-      <div class="kanji-column font-japanese" style="left: 9%; animation-duration: 22s; animation-delay: 2s; font-size: 0.9rem; opacity: 0.10;">一、我々は、武の真髄を極め、機に発し感に敏なること</div>
-      <div class="kanji-column font-japanese" style="left: 16%; animation-duration: 16s; animation-delay: 4s; font-size: 1.1rem; opacity: 0.14;">一、我々は、質実剛健を以て、自己の精神を涵養すること</div>
-      <div class="kanji-column font-japanese" style="left: 23%; animation-duration: 20s; animation-delay: 1s; font-size: 0.95rem; opacity: 0.10;">一、我々は、礼節を重んじ、長上を敬し粗暴の振舞いを慎むこと</div>
-      <div class="kanji-column font-japanese" style="left: 30%; animation-duration: 15s; animation-delay: 6s; font-size: 1.05rem; opacity: 0.12;">一、我々は、神仏を尊び、謙譲の美徳を忘れざること</div>
-      <div class="kanji-column font-japanese" style="left: 37%; animation-duration: 24s; animation-delay: 3s; font-size: 0.85rem; opacity: 0.10;">一、我々は、智性と体力とを向上させ、事に臨んで過たざること</div>
-      <div class="kanji-column font-japanese" style="left: 44%; animation-duration: 19s; animation-delay: 5s; font-size: 1rem; opacity: 0.14;">一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること</div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 2%; animation-duration: 18s; animation-delay: 0s; font-size: 1rem; opacity: 0.12;"
+      >
+        一、我々は、心身を錬磨し、確固不抜の心技を極めること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 9%; animation-duration: 22s; animation-delay: 2s; font-size: 0.9rem; opacity: 0.10;"
+      >
+        一、我々は、武の真髄を極め、機に発し感に敏なること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 16%; animation-duration: 16s; animation-delay: 4s; font-size: 1.1rem; opacity: 0.14;"
+      >
+        一、我々は、質実剛健を以て、自己の精神を涵養すること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 23%; animation-duration: 20s; animation-delay: 1s; font-size: 0.95rem; opacity: 0.10;"
+      >
+        一、我々は、礼節を重んじ、長上を敬し粗暴の振舞いを慎むこと
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 30%; animation-duration: 15s; animation-delay: 6s; font-size: 1.05rem; opacity: 0.12;"
+      >
+        一、我々は、神仏を尊び、謙譲の美徳を忘れざること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 37%; animation-duration: 24s; animation-delay: 3s; font-size: 0.85rem; opacity: 0.10;"
+      >
+        一、我々は、智性と体力とを向上させ、事に臨んで過たざること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 44%; animation-duration: 19s; animation-delay: 5s; font-size: 1rem; opacity: 0.14;"
+      >
+        一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること
+      </div>
 
       <!-- Zweite Welle: Zeilen 1–7, versetzt -->
-      <div class="kanji-column font-japanese" style="left: 52%; animation-duration: 21s; animation-delay: 7s; font-size: 0.9rem; opacity: 0.10;">一、我々は、心身を錬磨し、確固不抜の心技を極めること</div>
-      <div class="kanji-column font-japanese" style="left: 58%; animation-duration: 17s; animation-delay: 0.5s; font-size: 1.1rem; opacity: 0.12;">一、我々は、武の真髄を極め、機に発し感に敏なること</div>
-      <div class="kanji-column font-japanese" style="left: 65%; animation-duration: 23s; animation-delay: 8s; font-size: 0.95rem; opacity: 0.10;">一、我々は、質実剛健を以て、自己の精神を涵養すること</div>
-      <div class="kanji-column font-japanese" style="left: 72%; animation-duration: 14s; animation-delay: 3.5s; font-size: 1rem; opacity: 0.14;">一、我々は、礼節を重んじ、長上を敬し粗暴の振舞いを慎むこと</div>
-      <div class="kanji-column font-japanese" style="left: 78%; animation-duration: 20s; animation-delay: 9s; font-size: 0.85rem; opacity: 0.10;">一、我々は、神仏を尊び、謙譲の美徳を忘れざること</div>
-      <div class="kanji-column font-japanese" style="left: 85%; animation-duration: 16s; animation-delay: 1.5s; font-size: 1.05rem; opacity: 0.12;">一、我々は、智性と体力とを向上させ、事に臨んで過たざること</div>
-      <div class="kanji-column font-japanese" style="left: 93%; animation-duration: 25s; animation-delay: 10s; font-size: 0.9rem; opacity: 0.10;">一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること</div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 52%; animation-duration: 21s; animation-delay: 7s; font-size: 0.9rem; opacity: 0.10;"
+      >
+        一、我々は、心身を錬磨し、確固不抜の心技を極めること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 58%; animation-duration: 17s; animation-delay: 0.5s; font-size: 1.1rem; opacity: 0.12;"
+      >
+        一、我々は、武の真髄を極め、機に発し感に敏なること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 65%; animation-duration: 23s; animation-delay: 8s; font-size: 0.95rem; opacity: 0.10;"
+      >
+        一、我々は、質実剛健を以て、自己の精神を涵養すること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 72%; animation-duration: 14s; animation-delay: 3.5s; font-size: 1rem; opacity: 0.14;"
+      >
+        一、我々は、礼節を重んじ、長上を敬し粗暴の振舞いを慎むこと
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 78%; animation-duration: 20s; animation-delay: 9s; font-size: 0.85rem; opacity: 0.10;"
+      >
+        一、我々は、神仏を尊び、謙譲の美徳を忘れざること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 85%; animation-duration: 16s; animation-delay: 1.5s; font-size: 1.05rem; opacity: 0.12;"
+      >
+        一、我々は、智性と体力とを向上させ、事に臨んで過たざること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 93%; animation-duration: 25s; animation-delay: 10s; font-size: 0.9rem; opacity: 0.10;"
+      >
+        一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること
+      </div>
 
       <!-- Dritte Welle: Luecken fuellen -->
-      <div class="kanji-column font-japanese" style="left: 5%; animation-duration: 26s; animation-delay: 11s; font-size: 0.85rem; opacity: 0.08;">一、我々は、心身を錬磨し、確固不抜の心技を極めること</div>
-      <div class="kanji-column font-japanese" style="left: 19%; animation-duration: 19s; animation-delay: 12s; font-size: 0.9rem; opacity: 0.09;">一、我々は、質実剛健を以て、自己の精神を涵養すること</div>
-      <div class="kanji-column font-japanese" style="left: 48%; animation-duration: 22s; animation-delay: 13s; font-size: 0.85rem; opacity: 0.08;">一、我々は、神仏を尊び、謙譲の美徳を忘れざること</div>
-      <div class="kanji-column font-japanese" style="left: 68%; animation-duration: 17s; animation-delay: 14s; font-size: 0.9rem; opacity: 0.09;">一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること</div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 5%; animation-duration: 26s; animation-delay: 11s; font-size: 0.85rem; opacity: 0.08;"
+      >
+        一、我々は、心身を錬磨し、確固不抜の心技を極めること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 19%; animation-duration: 19s; animation-delay: 12s; font-size: 0.9rem; opacity: 0.09;"
+      >
+        一、我々は、質実剛健を以て、自己の精神を涵養すること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 48%; animation-duration: 22s; animation-delay: 13s; font-size: 0.85rem; opacity: 0.08;"
+      >
+        一、我々は、神仏を尊び、謙譲の美徳を忘れざること
+      </div>
+      <div
+        class="kanji-column font-japanese"
+        style="left: 68%; animation-duration: 17s; animation-delay: 14s; font-size: 0.9rem; opacity: 0.09;"
+      >
+        一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること
+      </div>
     </div>
 
     <!-- Kyokushinkai SVG Watermark -->
     <img
-      src="/Kyokushinkai.svg"
+      src={`${base}Kyokushinkai.svg`}
       alt=""
       aria-hidden="true"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[70vh] w-auto opacity-[0.14] md:opacity-[0.06] invert brightness-200 pointer-events-none"
     />
 
     <!-- Centered Kanji Content -->
-    <div class="relative z-10 flex flex-col items-center justify-center gap-4 text-center">
-
+    <div
+      class="relative z-10 flex flex-col items-center justify-center gap-4 text-center"
+    >
       <!-- IKO Name -->
-      <span class="font-japanese text-gray-400 text-base md:text-lg tracking-[0.3em] intro-animate" style="animation-delay: 0.3s;">
+      <span
+        class="font-japanese text-gray-400 text-base md:text-lg tracking-[0.3em] intro-animate"
+        style="animation-delay: 0.3s;"
+      >
         国際空手道連盟
       </span>
 
       <!-- Kyokushinkai -->
-      <span class="font-japanese text-white text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider intro-animate" style="animation-delay: 0.6s; text-shadow: 0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.25), 0 0 100px rgba(214,0,28,0.2);">
+      <span
+        class="font-japanese text-white text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider intro-animate"
+        style="animation-delay: 0.6s; text-shadow: 0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.25), 0 0 100px rgba(214,0,28,0.2);"
+      >
         極真会館
       </span>
 
       <!-- Red Dot Accent -->
-      <div class="w-2 h-2 bg-primary rounded-full mt-4 intro-animate" style="animation-delay: 0.9s;"></div>
-
+      <div
+        class="w-2 h-2 bg-primary rounded-full mt-4 intro-animate"
+        style="animation-delay: 0.9s;"
+      >
+      </div>
     </div>
 
     <!-- Enter Site Link -->
     <a
       id="enter-link"
-      href="/home"
+      href={`${base}home`}
       class="absolute bottom-28 md:bottom-16 z-10 flex flex-col items-center gap-1 text-gray-400 hover:text-white transition-colors duration-500 intro-pulse intro-animate"
       style="animation-delay: 1.5s;"
     >
-      <span class="font-heading text-base md:text-lg tracking-[0.5em] uppercase">OSU</span>
-      <span class="font-japanese text-sm md:text-base tracking-widest">押忍</span>
+      <span class="font-heading text-base md:text-lg tracking-[0.5em] uppercase"
+        >OSU</span
+      >
+      <span class="font-japanese text-sm md:text-base tracking-widest"
+        >押忍</span
+      >
     </a>
 
     <!-- Fade-to-White Exit Overlay -->
     <div id="exit-overlay" class="intro-exit-overlay"></div>
-
   </div>
 </Layout>
 
 <script>
-  const link = document.getElementById('enter-link');
-  const overlay = document.getElementById('exit-overlay');
+  const link = document.getElementById("enter-link");
+  const overlay = document.getElementById("exit-overlay");
 
   if (link && overlay) {
-    link.addEventListener('click', (e) => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      overlay.classList.add('active');
+      overlay.classList.add("active");
 
-      overlay.addEventListener('transitionend', () => {
-        window.location.href = link.getAttribute('href');
-      }, { once: true });
+      overlay.addEventListener(
+        "transitionend",
+        () => {
+          window.location.href = link.getAttribute("href");
+        },
+        { once: true },
+      );
 
       setTimeout(() => {
-        window.location.href = link.getAttribute('href');
+        window.location.href = link.getAttribute("href");
       }, 700);
     });
   }
