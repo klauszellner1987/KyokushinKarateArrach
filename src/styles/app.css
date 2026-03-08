@@ -138,8 +138,15 @@ h6 {
 
 /* Intro Page Animations */
 @keyframes gentle-pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
 .intro-pulse {
@@ -151,6 +158,7 @@ h6 {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -167,6 +175,7 @@ h6 {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -231,7 +240,8 @@ h6 {
     }
 
     .kanji-rain {
-        display: none;
+        /* User explicitly wants to see it, so we do not hide it.
+           We could reduce animation speed here if needed, but we leave it active. */
     }
 
     .intro-exit-overlay {
