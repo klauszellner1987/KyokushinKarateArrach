@@ -4,15 +4,24 @@ import "../styles/app.css";
 interface Props {
 	title?: string;
 	description?: string;
+	canonicalPath?: string;
+	ogImage?: string;
+	structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
 	title = "Kyokushin Karate Arrach",
 	description = "Kyokushin Karate Arrach – Kampfkunst im Bayerischen Wald. Trainiere Vollkontakt-Karate in unserer Gemeinschaft. Sparte des FC Ottenzell e.V.",
+	canonicalPath,
+	ogImage = "/hero-logo.png",
+	structuredData,
 } = Astro.props;
 
 const baseObj = import.meta.env.BASE_URL;
 const base = baseObj.endsWith("/") ? baseObj : baseObj + "/";
+const siteUrl = Astro.site ?? new URL("https://kyokushin-karate-arrach.de");
+const canonicalUrl = canonicalPath ? new URL(canonicalPath, siteUrl) : undefined;
+const ogImageUrl = new URL(ogImage, siteUrl);
 ---
 
 <!doctype html>
@@ -25,12 +34,25 @@ const base = baseObj.endsWith("/") ? baseObj : baseObj + "/";
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="theme-color" content="#0a0a0a" />
+		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
 		<!-- Open Graph -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:site_name" content="Kyokushin Karate Arrach" />
+		{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:alt" content="Kyokushin Karate Arrach" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
+
+		{structuredData && (
+			<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+		)}
 
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />

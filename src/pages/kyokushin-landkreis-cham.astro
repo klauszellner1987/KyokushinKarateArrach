@@ -1,0 +1,233 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageUrl = "https://kyokushin-karate-arrach.de/kyokushin-landkreis-cham/";
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Kyokushin Karate im Landkreis Cham",
+    url: pageUrl,
+    description: "Kyokushin Vollkontakt-Karate für Kinder und Erwachsene in Arrach-Haibühl im Landkreis Cham.",
+    about: { "@type": "Thing", name: "Kyokushin Karate" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    name: "Kyokushin Karate Arrach",
+    url: "https://kyokushin-karate-arrach.de/home/",
+    telephone: "+49 151 29805299",
+    email: "klaus-zellner@gmx.de",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Pfarrer-Busch-Straße 8",
+      addressLocality: "Haibühl",
+      postalCode: "93474",
+      addressRegion: "Bayern",
+      addressCountry: "DE",
+    },
+    areaServed: ["Arrach", "Lam", "Hohenwarth", "Bad Kötzting", "Landkreis Cham"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Wo kann ich in der Region Bad Kötzting Kyokushin Karate trainieren?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Kyokushin Karate Arrach bietet Training für Kinder ab 6 Jahren, Erwachsene und Wettkämpfer in der Turnhalle Haibühl, Pfarrer-Busch-Straße 8, im Landkreis Cham an. Das Dojo ist auch für Interessierte aus Bad Kötzting, Lam und Hohenwarth gut erreichbar.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Können Anfänger am Kyokushin-Training teilnehmen?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Ja. Im Dojo Arrach sind Anfänger ebenso willkommen wie erfahrene Karateka. Ein Probetraining kann telefonisch oder per E-Mail vereinbart werden.",
+        },
+      },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Kyokushin nahe Bad Kötzting | Dojo Arrach im Landkreis Cham"
+  description="Kyokushin Vollkontakt-Karate für Bad Kötzting und den Landkreis Cham: Training für Kinder ab 6 Jahren, Erwachsene und Wettkämpfer in Arrach-Haibühl."
+  canonicalPath="/kyokushin-landkreis-cham/"
+  structuredData={structuredData}
+>
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2">
+    Zum Inhalt springen
+  </a>
+
+  <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-black/95 backdrop-blur-xl py-4">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto px-4 md:justify-center">
+      <a href="/home" class="font-heading text-sm text-white/80 hover:text-white uppercase tracking-widest">
+        ← Zurück zur Hauptseite
+      </a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="bg-dark min-h-screen">
+    <header class="relative min-h-[78vh] flex items-center justify-center overflow-hidden pt-24">
+      <img src="/Kyokushinkai.svg" alt="" aria-hidden="true" class="absolute h-[70vh] opacity-[0.08] invert pointer-events-none" />
+      <div class="relative z-10 max-w-5xl mx-auto px-4 py-24 text-center">
+        <p class="text-primary font-heading text-sm tracking-[0.35em] uppercase mb-6">Arrach · Bayerischer Wald</p>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold uppercase leading-[1.05] mb-8">
+          Kyokushin Karate<br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">im Landkreis Cham</span>
+        </h1>
+        <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed font-light mb-10">
+          Ehrliches Vollkontakt-Karate für Kinder ab 6 Jahren, Erwachsene und Wettkämpfer –
+          mitten in Arrach-Haibühl und offen für die gesamte Region.
+        </p>
+        <a href="/home#trainingszeiten" class="inline-block bg-primary hover:bg-red-700 text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all hover:-translate-y-1">
+          Probetraining
+        </a>
+      </div>
+    </header>
+
+    <section class="py-28 bg-surface">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-5">Das Dojo der Region</p>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase mb-8">Kyokushin ohne Umwege</h2>
+            <p class="text-gray-400 text-lg leading-loose font-light mb-6">
+              Im Dojo Arrach trainieren Menschen aus Arrach, Lam, Hohenwarth, Bad Kötzting und dem gesamten Landkreis Cham. Anfänger sind ebenso willkommen wie erfahrene Karateka.
+            </p>
+            <p class="text-gray-400 text-lg leading-loose font-light">
+              Unser Training verbindet Kihon, Kata und Kumite mit Kondition, Disziplin und gegenseitigem Respekt. Eine komplette Turnhalle und ein eigener Dojo-Raum schaffen dafür beste Bedingungen.
+            </p>
+          </div>
+          <div class="relative aspect-[4/3] overflow-hidden border border-white/10">
+            <img src="/Group_Arrach_24-7.jpg" alt="Kyokushin Karate Training im Dojo Arrach im Landkreis Cham" class="w-full h-full object-cover" width="1200" height="900" />
+            <div class="absolute inset-0 shadow-[inset_0_0_60px_20px_#141414]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 bg-dark relative overflow-hidden">
+      <div class="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-primary/[0.04] to-transparent pointer-events-none"></div>
+      <div class="container mx-auto px-4 max-w-6xl relative z-10">
+        <div class="grid md:grid-cols-[0.8fr_1.2fr] gap-12 md:gap-20 items-start">
+          <div>
+            <p class="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-5">Bad Kötzting und Umgebung</p>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase leading-tight">
+              Kyokushin im oberen Bayerischen Wald
+            </h2>
+          </div>
+          <div class="space-y-6 text-gray-400 text-lg leading-loose font-light">
+            <p>
+              Du suchst Kyokushin Karate in der Region Bad Kötzting? Unser Dojo liegt in Arrach-Haibühl und ist damit eine nahe Trainingsmöglichkeit für Karate-Interessierte aus Bad Kötzting, Grafenwiesen, Hohenwarth, Lam und dem Lamer Winkel.
+            </p>
+            <p>
+              Statt einer anonymen Kampfsportschule erwartet dich bei uns eine gewachsene Gemeinschaft in der Karate-Sparte des FC Ottenzell. Trainiert wird mit klarer Linie: Technik, Kondition, kontrollierte Härte und Respekt vor dem Trainingspartner.
+            </p>
+            <div class="border-l-2 border-primary pl-6 py-1">
+              <p class="text-white font-heading uppercase tracking-wide">
+                Von Bad Kötzting nach Arrach: regional trainieren, Kyokushin konsequent leben.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 bg-surface relative overflow-hidden">
+      <img src="/Kyokushinkai.svg" alt="" aria-hidden="true" class="absolute -right-24 top-1/2 -translate-y-1/2 h-[55vh] opacity-[0.04] invert pointer-events-none" />
+      <div class="container mx-auto px-4 max-w-6xl relative z-10">
+        <div class="max-w-3xl">
+          <p class="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-5">Tradition und Ursprung</p>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase mb-8">Die Geschichte des Kyokushin</h2>
+          <div class="space-y-6 text-gray-400 text-lg leading-loose font-light">
+            <p>
+              Kyokushin wurde von Masutatsu Oyama entwickelt und 1964 mit der Gründung der International Karate Organization in Tokio als eigener Karatestil etabliert. Der Name bedeutet sinngemäß „die ultimative Wahrheit“ – ein Anspruch, der nicht für Überheblichkeit steht, sondern für ehrliches Training und die fortwährende Arbeit an sich selbst.
+            </p>
+            <p>
+              Im Mittelpunkt stehen bis heute die drei Säulen <strong class="text-white font-normal">Kihon</strong> – die Grundtechniken, <strong class="text-white font-normal">Kata</strong> – festgelegte Formen, und <strong class="text-white font-normal">Kumite</strong> – die praktische Anwendung im Kampf. Kyokushin wurde weltweit besonders durch sein anspruchsvolles Vollkontakt-Karate bekannt.
+            </p>
+            <p>
+              Diese Tradition verbinden wir in Arrach mit einer bodenständigen Gemeinschaft aus dem Bayerischen Wald. Wer aus Bad Kötzting oder dem Landkreis Cham zu uns kommt, trainiert keinen kurzlebigen Fitness-Trend, sondern eine Kampfkunst mit Geschichte, Haltung und einem klaren Weg.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 bg-dark">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-4">Für deinen Weg</p>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase">Training in Arrach</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="glass p-8 border border-white/10">
+            <h3 class="text-2xl font-heading font-bold mb-5">Kinder ab 6</h3>
+            <p class="text-gray-400 leading-relaxed">Koordination, Selbstvertrauen, Respekt und altersgerechtes Karate in einer verlässlichen Gemeinschaft.</p>
+          </article>
+          <article class="glass p-8 border border-white/10">
+            <h3 class="text-2xl font-heading font-bold mb-5">Erwachsene</h3>
+            <p class="text-gray-400 leading-relaxed">Einsteiger und Fortgeschrittene trainieren Technik, Kata, Kondition und kontrolliertes Kumite.</p>
+          </article>
+          <article class="glass p-8 border border-primary/30">
+            <h3 class="text-2xl font-heading font-bold mb-5">Wettkampf</h3>
+            <p class="text-gray-400 leading-relaxed">Intensive Vorbereitung für Karateka, die ihre Grenzen testen und sich im Vollkontakt weiterentwickeln wollen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 bg-surface">
+      <div class="container mx-auto px-4 max-w-4xl text-center">
+        <p class="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-5">Einfach anfangen</p>
+        <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase mb-8">Komm zum Probetraining</h2>
+        <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-5">
+          Trainiert wird in der Turnhalle Haibühl, Pfarrer-Busch-Straße 8, 93474 Arrach. Bitte 15 Minuten vor Trainingsbeginn erscheinen.
+        </p>
+        <p class="text-gray-500 mb-10">Fragen oder Terminwunsch? Wir helfen dir persönlich weiter.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+          <a href="tel:+4915129805299" class="bg-primary hover:bg-red-700 text-white font-heading font-bold py-4 px-8 uppercase tracking-widest transition-colors">0151 / 29805299</a>
+          <a href="mailto:klaus-zellner@gmx.de" class="border border-white/20 hover:border-white/50 text-white font-heading font-bold py-4 px-8 uppercase tracking-widest transition-colors">E-Mail senden</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pfarrer-Busch-Stra%C3%9Fe+8+93474+Haib%C3%BChl" target="_blank" rel="noopener noreferrer" class="border border-white/20 hover:border-white/50 text-white font-heading font-bold py-4 px-8 uppercase tracking-widest transition-colors">Route öffnen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-dark border-t border-white/5">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-12">
+          <p class="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-4">Kurz beantwortet</p>
+          <h2 class="text-4xl font-heading font-bold uppercase">Kyokushin in der Region</h2>
+        </div>
+        <div class="space-y-5">
+          <details class="glass border border-white/10 p-6 group">
+            <summary class="cursor-pointer list-none flex justify-between gap-6 font-heading text-xl uppercase">
+              Wo kann ich nahe Bad Kötzting Kyokushin trainieren?
+              <span class="text-primary group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+            </summary>
+            <p class="text-gray-400 leading-relaxed mt-5 pr-8">
+              In der Turnhalle Haibühl, Pfarrer-Busch-Straße 8, 93474 Arrach. Das Dojo ist eine regionale Trainingsmöglichkeit für Kinder und Erwachsene aus Bad Kötzting, Lam, Hohenwarth, Grafenwiesen und dem Landkreis Cham.
+            </p>
+          </details>
+          <details class="glass border border-white/10 p-6 group">
+            <summary class="cursor-pointer list-none flex justify-between gap-6 font-heading text-xl uppercase">
+              Ist das Training auch für Anfänger geeignet?
+              <span class="text-primary group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+            </summary>
+            <p class="text-gray-400 leading-relaxed mt-5 pr-8">
+              Ja. Vorkenntnisse sind nicht erforderlich. Anfänger lernen Schritt für Schritt die Grundlagen und trainieren entsprechend ihrer Erfahrung und körperlichen Voraussetzungen.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark py-10 border-t border-white/10 text-center">
+    <p class="text-xs text-gray-600 uppercase tracking-widest">© {new Date().getFullYear()} Kyokushin Karate Arrach · Sparte des FC Ottenzell</p>
+  </footer>
+</Layout>

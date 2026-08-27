@@ -1,8 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const localBusinessData = {
+  "@context": "https://schema.org",
+  "@type": ["SportsClub", "LocalBusiness"],
+  name: "Kyokushin Karate Arrach",
+  url: "https://kyokushin-karate-arrach.de/home/",
+  image: "https://kyokushin-karate-arrach.de/hero-logo.png",
+  logo: "https://kyokushin-karate-arrach.de/logo-final.png",
+  description: "Kyokushin Vollkontakt-Karate für Kinder und Erwachsene in Arrach-Haibühl im Landkreis Cham.",
+  telephone: "+49 151 29805299",
+  email: "klaus-zellner@gmx.de",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Pfarrer-Busch-Straße 8",
+    addressLocality: "Haibühl",
+    postalCode: "93474",
+    addressRegion: "Bayern",
+    addressCountry: "DE",
+  },
+  areaServed: ["Arrach", "Lam", "Hohenwarth", "Bad Kötzting", "Landkreis Cham"],
+  sameAs: [
+    "https://www.facebook.com/KyokushinKarateArrach",
+    "https://www.instagram.com/kyokushin_karate_arrach/",
+  ],
+};
 ---
 
-<Layout>
+<Layout
+  title="Kyokushin Karate Arrach | Vollkontakt-Karate im Landkreis Cham"
+  description="Kyokushin Karate in Arrach-Haibühl im Landkreis Cham: Vollkontakt-Karate für Kinder ab 6 Jahren, Erwachsene und Wettkämpfer. Jetzt Probetraining vereinbaren."
+  canonicalPath="/home/"
+  structuredData={localBusinessData}
+>
   <!-- Skip to Content -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:font-heading focus:uppercase focus:tracking-widest">
     Zum Inhalt springen
@@ -128,11 +158,11 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <!-- Slogan -->
-      <h2
+      <h1
         class="text-lg md:text-2xl font-heading text-white/80 tracking-[0.4em] mb-10 uppercase animate-fade-in font-light"
       >
         Der Weg der <span class="text-primary font-bold">ultimativen Wahrheit</span>
-      </h2>
+      </h1>
 
       <!-- CTA Buttons (clean, no skew) -->
       <div
@@ -186,6 +216,19 @@ import Layout from "../layouts/Layout.astro";
             Ob du Anfänger bist oder schon Erfahrung mitbringst, ob jung oder alt –
             bei uns zählt nur eins: dass du da bist. OSU!
           </p>
+
+          <p class="text-gray-500 leading-relaxed mb-8 font-light">
+            Unser Dojo ist eine Anlaufstelle für Kyokushin Karate im Landkreis Cham –
+            für Karateka aus Arrach, Lam, Hohenwarth, Bad Kötzting und der umliegenden Region.
+          </p>
+
+          <a
+            href="/kyokushin-landkreis-cham"
+            class="inline-flex items-center gap-3 text-primary font-heading uppercase tracking-widest text-sm hover:text-white transition-colors"
+          >
+            Kyokushin im Landkreis Cham
+            <span aria-hidden="true">→</span>
+          </a>
 
         </div>
 
@@ -539,6 +582,17 @@ import Layout from "../layouts/Layout.astro";
         <p class="text-gray-500 text-sm">
           Bitte 15 Minuten vor Trainingsbeginn erscheinen.
         </p>
+        <p class="text-gray-400 text-sm mt-3">
+          Trainingsort: Turnhalle Haibühl · Pfarrer-Busch-Straße 8 · 93474 Arrach
+        </p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Pfarrer-Busch-Stra%C3%9Fe+8+93474+Haib%C3%BChl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-4 text-primary font-heading uppercase tracking-widest text-sm hover:text-white transition-colors"
+        >
+          Route öffnen
+        </a>
       </div>
     </div>
   </section>
