@@ -168,12 +168,13 @@ const localBusinessData = {
       <div
         class="flex flex-col md:flex-row gap-6 animate-fade-in delay-300"
       >
-        <a
-          href="#trainingszeiten"
+        <button
+          type="button"
+          data-trial-open
           class="bg-primary hover:bg-red-700 text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all hover:shadow-[0_0_20px_rgba(214,0,28,0.4)] hover:-translate-y-1 text-base"
         >
           Probetraining
-        </a>
+        </button>
         <a
           href="#about"
           class="border border-white/20 hover:border-white/40 text-white font-heading font-bold py-4 px-10 uppercase tracking-widest transition-all hover:-translate-y-1 text-base"
@@ -1064,6 +1065,61 @@ const localBusinessData = {
 
   </main>
 
+  <!-- PROBETRAINING MODAL -->
+  <dialog id="trial-dialog" class="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[calc(100vh-2rem)] overflow-y-auto bg-surface text-white border border-white/15 p-0 backdrop:bg-black/85 backdrop:backdrop-blur-sm">
+    <div class="relative p-6 sm:p-9">
+      <button type="button" data-trial-close class="absolute top-4 right-4 w-11 h-11 flex items-center justify-center text-gray-400 hover:text-white border border-white/10 hover:border-white/30 transition-colors" aria-label="Fenster schließen">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18 18 6M6 6l12 12" /></svg>
+      </button>
+
+      <p class="text-primary font-heading text-xs tracking-[0.3em] uppercase mb-3">Einfach kennenlernen</p>
+      <h2 class="text-4xl sm:text-5xl font-heading font-bold uppercase leading-tight pr-12 mb-3">Probetraining</h2>
+      <p class="text-gray-400 leading-relaxed mb-7">Sag uns kurz, wer du bist und wann du vorbeikommen möchtest. Wir melden uns persönlich bei dir.</p>
+
+      <form id="trial-form" action="https://formspree.io/f/xzebpyal" method="POST" class="space-y-5">
+        <input type="hidden" name="_subject" value="Neue Probetrainingsanfrage – Kyokushin Karate Arrach" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="trial-name" class="block text-xs font-heading uppercase tracking-widest text-gray-300 mb-2">Name</label>
+            <input id="trial-name" name="name" type="text" autocomplete="name" required class="w-full bg-dark border border-white/15 px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-primary" placeholder="Vor- und Nachname" />
+          </div>
+          <div>
+            <label for="trial-email" class="block text-xs font-heading uppercase tracking-widest text-gray-300 mb-2">E-Mail-Adresse</label>
+            <input id="trial-email" name="email" type="email" autocomplete="email" required class="w-full bg-dark border border-white/15 px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-primary" placeholder="name@beispiel.de" />
+          </div>
+          <div>
+            <label for="trial-date" class="block text-xs font-heading uppercase tracking-widest text-gray-300 mb-2">Wunschtermin</label>
+            <input id="trial-date" name="date" type="date" required class="w-full bg-dark border border-white/15 px-4 py-3 text-white focus:outline-none focus:border-primary [color-scheme:dark]" />
+          </div>
+          <div>
+            <label for="trial-group" class="block text-xs font-heading uppercase tracking-widest text-gray-300 mb-2">Training</label>
+            <select id="trial-group" name="training" required class="w-full bg-dark border border-white/15 px-4 py-3 text-white focus:outline-none focus:border-primary">
+              <option value="">Bitte auswählen</option>
+              <option value="Kinder und Jugendliche">Kinder & Jugendliche</option>
+              <option value="Erwachsene">Erwachsene</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="trial-message" class="block text-xs font-heading uppercase tracking-widest text-gray-300 mb-2">Nachricht <span class="text-gray-600 normal-case tracking-normal">(optional)</span></label>
+          <textarea id="trial-message" name="message" rows="3" class="w-full bg-dark border border-white/15 px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-primary resize-y" placeholder="Gibt es etwas, das wir wissen sollten?"></textarea>
+        </div>
+
+        <label class="flex items-start gap-3 text-sm text-gray-400 leading-relaxed cursor-pointer">
+          <input name="privacy" type="checkbox" required class="mt-1 accent-[#d6001c]" />
+          <span>Ich bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Probetrainingsanfrage einverstanden. Hinweise stehen in der <a href="/datenschutz" class="text-white underline decoration-primary underline-offset-4">Datenschutzerklärung</a>.</span>
+        </label>
+
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+          <button id="trial-submit" type="submit" class="bg-primary hover:bg-red-700 disabled:bg-gray-700 disabled:cursor-wait text-white font-heading font-bold py-4 px-8 uppercase tracking-widest transition-colors">Anfrage senden</button>
+          <p id="trial-status" class="hidden text-sm text-gray-400" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
   <!-- FOOTER -->
   <footer
     id="contact"
@@ -1150,6 +1206,74 @@ const localBusinessData = {
   </footer>
 
   <script is:inline>
+    // Probetraining dialog and Formspree delivery
+    const trialDialog = document.getElementById("trial-dialog");
+    const trialForm = document.getElementById("trial-form");
+    const trialDate = document.getElementById("trial-date");
+    const trialStatus = document.getElementById("trial-status");
+    const trialSubmit = document.getElementById("trial-submit");
+
+    if (trialDate) {
+      trialDate.min = new Date().toLocaleDateString("en-CA");
+    }
+
+    document.querySelectorAll("[data-trial-open]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        if (!trialDialog) return;
+        trialStatus?.classList.add("hidden");
+        trialDialog.showModal();
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    document.querySelectorAll("[data-trial-close]").forEach((trigger) => {
+      trigger.addEventListener("click", () => trialDialog?.close());
+    });
+
+    if (trialDialog) {
+      trialDialog.addEventListener("close", () => {
+        document.body.style.overflow = "";
+      });
+      trialDialog.addEventListener("click", (event) => {
+        if (event.target === trialDialog) trialDialog.close();
+      });
+    }
+
+    if (trialForm) {
+      trialForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        trialSubmit.disabled = true;
+        trialSubmit.textContent = "Wird gesendet …";
+        trialStatus.textContent = "Deine Anfrage wird übermittelt.";
+        trialStatus.classList.remove("text-green-400", "text-red-400");
+        trialStatus.classList.remove("hidden");
+
+        try {
+          const response = await fetch(trialForm.action, {
+            method: "POST",
+            body: new FormData(trialForm),
+            headers: { Accept: "application/json" },
+          });
+
+          if (!response.ok) throw new Error("Form submission failed");
+
+          trialForm.reset();
+          trialStatus.textContent = "Danke! Deine Anfrage wurde gesendet. Wir melden uns persönlich bei dir.";
+          trialStatus.classList.add("text-green-400");
+          window.setTimeout(() => {
+            trialDialog?.close();
+            trialStatus.classList.add("hidden");
+          }, 2500);
+        } catch (error) {
+          trialStatus.textContent = "Das Senden hat leider nicht funktioniert. Bitte versuche es erneut oder schreibe an klaus-zellner@gmx.de.";
+          trialStatus.classList.add("text-red-400");
+        } finally {
+          trialSubmit.disabled = false;
+          trialSubmit.textContent = "Anfrage senden";
+        }
+      });
+    }
+
     // Mobile Menu Toggle with aria-expanded
     const btn = document.querySelector(
       '[data-collapse-toggle="navbar-default"]'
